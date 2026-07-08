@@ -140,8 +140,7 @@ async function startConversation(userId) {
 
 const conversation = await res.json();
 
-router.push(`/chat/${conversation._id}`);
-
+router.push(`/chat?id=${conversation._id}`);
 setSearch("");
 setSearchResults([]);
 }
