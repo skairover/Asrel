@@ -31,7 +31,7 @@ export default function Register() {
   
 
     try {
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`, {
         name: form.name,
         email: form.email,
         password: form.password,
