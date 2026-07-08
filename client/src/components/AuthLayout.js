@@ -1,7 +1,7 @@
 import Image from "next/image";
-import notebook from "/public/closed-notebook.png";
-import ebook from "/public/E-ink-tablet.png";
-import openedbook from "/public/opened-book-txt-img.png";
+import notebook from "/closed-notebook.png";
+import ebook from "/E-ink-tablet.png";
+import openedbook from "/opened-book-txt-img.png";
 import { useEffect, useState } from "react";
 
 export default function AuthLayout({ children }) {
@@ -30,7 +30,8 @@ export default function AuthLayout({ children }) {
             left: positions[i]?.left,
           }}
         >
-          <Image src={img} alt="book icon" />
+          <Image src={img} alt="book icon"  width={100}
+  height={100}/>
         </div>
       ))}
 

@@ -7,7 +7,6 @@ export default function Header() {
     return (
   <div className="w-full h-14 flex justify-start gap-4 items-center px-6  ml-[60px] bg-[var(--bg)]">
     <div className="flex items-center">
-      <Image src={logo} alt="" className="w-12" />
       <p className="text-[#1A1A1A] text-3xl font-black font-ThinkBold -ml-1 mt-[0.25rem]">SREL</p>
     </div>
     <div className="relative w-64 max-w-sm">
