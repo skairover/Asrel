@@ -1,12 +1,12 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Moon, Sun } from "lucide-react";
-import MessageList from "./MessageList";
-import useChat from "../hooks/useChat";
-import MessageComposer from "./MessageComposer";
-import ConversationItem from "./ConversationItem";
-import ChatHeader from "./ChatHeader";
-import THEMES from "../constants/themes";
+import MessageList from "../chat/components/MessageList";
+import useChat from "../chat/hooks/useChat";
+import MessageComposer from "../chat/components/MessageComposer";
+import ConversationItem from "../chat/components/ConversationItem";
+import ChatHeader from "../chat/components/ChatHeader";
+import THEMES from "../chat/constants/themes";
 import { useRouter } from "next/router";
 
 
