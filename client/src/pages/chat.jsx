@@ -134,7 +134,7 @@ async function startConversation(userId) {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
-      participants: [userId],
+      recipientId: userId,
     }),
   });
 
@@ -285,9 +285,9 @@ console.log("mobileView:", mobileView);
   key={c._id}
   conv={c}
   active={c._id === selectedId}
-  onClick={() => {
-    router.push(`/chat/${c._id}`);
-  }}
+onClick={() => {
+  router.push(`/chat?id=${c._id}`);
+}}
   theme={theme}
 />
   ))
