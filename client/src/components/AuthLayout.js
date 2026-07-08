@@ -13,7 +13,6 @@ export default function AuthLayout({ children }) {
     setPositions(newPositions);
   }, []);
 
-  const images = [notebook, ebook, openedbook];
 
   return (
     <div className="max-w-screen h-screen flex bg-[#F5EFE6] relative overflow-y-hidden">
