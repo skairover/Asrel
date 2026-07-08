@@ -165,7 +165,9 @@ useEffect(() => {
           <MessageBubble
             key={item.key}
             msg={item.msg}
-            mine={item.msg.sender._id === currentUserId}
+            mine={
+ item.msg.sender?._id === currentUserId
+}
             grouped={item.grouped}
             isLast={item.isLast}
             theme={theme}

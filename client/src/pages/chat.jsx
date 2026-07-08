@@ -338,7 +338,7 @@ onClick={() => {
               messages={messages}
               typing={typing}
               loadingConv={loadingConv}
-              loadOlderMessages={loadOlderMessages}
+              loadOlder={loadOlder}
               reactToMessage={reactToMessage}
               editMessage={editMessage}
               deleteMessage={deleteMessage}

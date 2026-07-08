@@ -165,7 +165,7 @@ return () => {
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          conversation: selectedId,
+          conversationId: selectedId,
           text: draft,
           image: pendingImage,
           replyTo: replyingTo?._id || null,
@@ -195,7 +195,7 @@ return () => {
     setMessagesByConv((prev) => ({
       ...prev,
       [selectedId]: prev[selectedId].map((m) =>
-        m.id === msgId ? { ...m, text: newText, edited: true } : m,
+        m._id === msgId ? { ...m, text: newText, edited: true } : m,
       ),
     }));
   };
@@ -204,7 +204,7 @@ return () => {
     setMessagesByConv((prev) => ({
       ...prev,
       [selectedId]: prev[selectedId].map((m) =>
-        m.id === msgId ? { ...m, deleted: true, text: "" } : m,
+        m._id === msgId ? { ...m, deleted: true, text: "" } : m,
       ),
     }));
   };
@@ -213,7 +213,7 @@ return () => {
     setMessagesByConv((prev) => ({
       ...prev,
       [selectedId]: prev[selectedId].map((m) =>
-        m.id === msgId
+        m._id === msgId
           ? {
               ...m,
               reactions: m.reactions.includes(emoji)
