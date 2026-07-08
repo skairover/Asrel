@@ -127,7 +127,7 @@ const filteredConvs = useMemo(() => {
 async function startConversation(userId) {
   const token = localStorage.getItem("token");
 
-  const res = await fetch(`${API_URL}/api/chat/conversations`, {
+  const res = await fetch(`${API_URL}/api/conversations`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
