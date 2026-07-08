@@ -14,8 +14,10 @@ import { useRouter } from "next/router";
 
 const FONT_IMPORT = `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');`;
 
+
 export default function App() {
  const router = useRouter();
+ const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const { id } = router.query;
   const [mode, setMode] = useState("light");
   const theme = THEMES[mode];
@@ -35,7 +37,7 @@ export default function App() {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-      `/api/users/search?q=${encodeURIComponent(search)}`,
+      `${API_URL}/api/users/search?q=${encodeURIComponent(search)}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -125,7 +127,7 @@ const filteredConvs = useMemo(() => {
 async function startConversation(userId) {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("/api/chat/conversations", {
+  const res = await fetch(`${API_URL}/api/chat/conversations`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

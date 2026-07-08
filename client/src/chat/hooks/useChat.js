@@ -95,7 +95,7 @@ return () => {
   try {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("/api/chat/conversations", {
+    const res = await fetch(`${API_URL}/api/chat/conversations`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -157,7 +157,7 @@ return () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("/api/chat/messages", {
+      const res = await fetch(`${API_URL}/api/chat/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
