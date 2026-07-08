@@ -129,8 +129,8 @@ return () => {
  
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`${API_URL}/api/messages?conversationId=${id}`, {
-        headers: {
+          const res = await fetch(`${API_URL}/api/messages/${id}`, { 
+          headers: {
           Authorization: `Bearer ${token}`,
         },
       });
