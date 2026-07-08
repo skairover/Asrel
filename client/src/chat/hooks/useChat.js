@@ -180,8 +180,7 @@ return () => {
         [selectedId]: [...(prev[selectedId] || []), message],
       }));
 
-      const socket = await getSocket();
-      socket.emit("send-message", message);
+  
 
       setDraft("");
       setPendingImage(null);
