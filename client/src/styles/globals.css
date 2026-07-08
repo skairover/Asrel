@@ -1,0 +1,55 @@
+@font-face {
+  font-family:"ThinkBold";
+  src: url(/fonts/Think-Bold.ttf) format(truetype);
+}
+@font-face{
+  font-family:"Glitten";
+  src: url(/fonts/Glitten-Regular.otf) format(opentype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@import "tailwindcss";
+:root {
+  --bg: #F2F2F2;
+  --post: #EAE4D5;
+  --text: #000000;
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+.font-Glitten {
+  font-family: "Glitten", sans-serif;
+}
+.font-ThinkBold {
+  font-family: "ThinkBold", sans-serif;
+}
+
+/* Style headings */
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+/* Style lists */
+.prose ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+}
+
