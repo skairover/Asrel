@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from "react";
 import { getSocket } from "../services/socket";
 import { useRouter } from "next/router";
 export default function useChat() {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const [draft, setDraft] = useState("");
   const [pendingImage, setPendingImage] = useState(null);
   const [showEmoji, setShowEmoji] = useState(false);
@@ -128,7 +129,7 @@ return () => {
  
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`/api/messages?conversationId=${id}`, {
+      const res = await fetch(`${API_URL}/api/messages?conversationId=${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -149,7 +150,7 @@ return () => {
       console.error(err);
       setLoadingConv(false);
     }
-  }, [router])
+  }, [])
 
   const sendMessage = async () => {
     if (!draft.trim() && !pendingImage) return;
