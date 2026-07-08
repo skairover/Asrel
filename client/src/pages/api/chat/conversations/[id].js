@@ -1,4 +1,4 @@
-import {connectDB} from "@/lib/dbb";
+import {connectDB} from "@/lib/db";
 import Conversation from "@/models/Conversation";
 
 export default async function handler(req, res) {
